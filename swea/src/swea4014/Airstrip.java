@@ -24,18 +24,18 @@ public class Airstrip {
 				for(int j = 0; j < N; j++)
 					oneline[j] = map[i][j];
 				if(check(oneline, N, X) == 1) {
-					System.out.println(Arrays.toString(oneline));
+//					System.out.println(Arrays.toString(oneline));
 					total++;
 				}
 			}
-			System.out.println();
+//			System.out.println();
 			//세로 한줄 뽑기
 			for(int j = 0; j < N; j++) {
 				int[] oneline = new int[N];
 				for(int i = 0; i < N; i++)
 					oneline[i] = map[i][j];
 				if(check(oneline, N, X) == 1) {
-					System.out.println(Arrays.toString(oneline));
+//					System.out.println(Arrays.toString(oneline));
 					total++;
 				}
 			}
@@ -55,37 +55,37 @@ public class Airstrip {
 				return 0; //유효X
 		}
 		
+		int[] airstrip = new int[N]; //활주로가 건설된곳에 1로 채울 배열
+		
 		//활주로 건설하기
 		for(int i = 0; i < N - 1; i++) {
 			//경사로 건설해야 함
 			if(road[i] != road[i + 1]) {
 				//i가 더 크면
 				if(road[i] > road[i + 1]) {
-					while(true) {
-						//경사로 건설이 가능한지 확인
-						for(int len = 1; len <= X; len++) {
-							//인덱스 범위를 넘어가거나 같은 높이의 땅이 아니라면
-							if(i + len >= N || road[i + 1] != road[i + len])
-								return 0;
-						}
-						for(int len = 1; len <= X; len++)
-							road[i + len] = 5;
-						i += X;						
+					//경사로 건설이 가능한지 확인
+					for(int len = 1; len <= X; len++) {
+						//인덱스 범위를 넘어가거나, 같은 높이의 땅이 아니거나, 이미 활주로가 건설되어있으면
+						if(i + len >= N || road[i + 1] != road[i + len] || airstrip[i + len] != 0)
+							return 0;
 					}
+					for(int len = 1; len <= X; len++)
+						airstrip[i + len] = 1;
 				}
 				//i + 1이 더 크면
 				else {
 					//경사로 건설이 가능한지 확인
 					for(int len = 0; len < X; len++) {
-						//인덱스 범위를 넘어가거나 같은 높이의 땅이 아니라면
-						if(i - len < 0 || road[i] != road[i - len])
+						//인덱스 범위를 넘어가거나, 같은 높이의 땅이 아니거나, 이미 활주로가 건설되어있으면
+						if(i - len < 0 || road[i] != road[i - len] || airstrip[i - len] != 0)
 							return 0;
 					}
 					for(int len = 0; len < X; len++)
-						road[i - len] = 5;
+						airstrip[i - len] = 1;
 				}
 			}
 		}
+//		System.out.println("airstrip : " + Arrays.toString(airstrip));
 		return 1;
 	}
 }
