@@ -1,6 +1,6 @@
 package swea4014;
 
-import java.util.Arrays;
+
 import java.util.Scanner;
 
 public class Airstrip {
