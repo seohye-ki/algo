@@ -70,3 +70,13 @@
 | 66   | PGS    |            | 삼각 달팽이              | 레벨 2     | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/68645)                                       | 구현, 배열      |
 | 67   | PGS    |            | 거리두기 확인하기        | 레벨 2     | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/81302)                                       | 구현, BFS       |
 | 68   | PGS    |            | 행렬의 곱셈              | 레벨 2     | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12949)                                       | 수학, 배열      |
+
+
+### 표 추가 예정 문제
+- swea1208 flatten
+- swea4014 활주로 건설
+- swea4615 오셀로
+- swea6190 정곤이의 단조 증가하는 수
+- swea7102 준홍이의 카드놀이
+- pgs 문자열 압축
+
