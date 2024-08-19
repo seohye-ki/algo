@@ -28,13 +28,21 @@ public class Bye {
 			int[][] oldMap = newMap;
 			//1. 미세먼지 확산
 			newMap = spread(oldMap);
-			System.out.println(Arrays.deepToString(newMap));
+//			System.out.println(Arrays.deepToString(newMap));
 			
+			oldMap = newMap;
 			//2. 미세먼지 회전
-			newMap = rotate(newMap);
-			System.out.println(Arrays.deepToString(newMap));
+			newMap = rotate(oldMap);
+//			System.out.println(Arrays.deepToString(newMap));
 		}
-		sc.close();		
+		
+		int sum = 2;
+		for(int i = 0; i < R; i++) {
+			for(int j = 0; j < C; j++)
+				sum += newMap[i][j];
+		}
+		System.out.println(sum);
+		sc.close();
 	}
 	
 	//미세먼지 확산
@@ -68,8 +76,14 @@ public class Bye {
 	
 	//미세먼지 회전
 	static int[][] rotate(int[][] oldMap){
-//		int[][] change = new int[R][C];
-		int[][] change = oldMap;
+		int[][] change = new int[R][C];
+//		int[][] change = oldMap;
+		
+		//mapcopy
+		for(int i = 0; i < R; i++) {
+			for(int j = 0; j < C; j++)
+				change[i][j] = oldMap[i][j];
+		}
 		
 		//공기청정기 찾기
 		int row = 0;
@@ -99,28 +113,23 @@ public class Bye {
 			change[i][0] = oldMap[i - 1][0];
 
 		
-//		//하단 시계회전 - 오른쪽으로
-//		for(int i = 1; i < C; i++) {
-//			int tmp = oldMap[row + 1][i - 1];
-//			if(tmp == -1)
-//				change[row][i] = 0;
-//			else
-//				change[row][i] = tmp;
-//		}
-//		//상단 반시계회전 - 아래쪽으로
-//		for(int i = row; i >= 0; i--)
-//			change[i][C - 1] = oldMap[i][C - 1];
-//		//상단 반시계회전 - 왼쪽으로
-//		for(int i = C - 1; i >= 0; i--)
-//			change[0][i] = oldMap[0][i];
-//		//상단 반시계회전 - 아래쪽으로
-//		for(int i = 0; i <= row; i++) {
-//			int tmp = oldMap[row][0];
-//			if(tmp == -1)
-//				change[i][0] = 0;
-//			else
-//				change[i][0] = tmp;
-//		}
+		//하단 시계회전 - 오른쪽으로
+		for(int i = 1; i < C; i++) {
+			int tmp = oldMap[row + 1][i - 1];
+			if(tmp == -1)
+				change[row + 1][i] = 0;
+			else
+				change[row + 1][i] = tmp;
+		}
+		//하단 시계회전 - 아래쪽으로
+		for(int i = row + 2; i < R; i++)
+			change[i][C - 1] = oldMap[i - 1][C - 1];
+		//하단 시계회전 - 왼쪽으로
+		for(int i = C - 2; i >= 0; i--)
+			change[R - 1][i] = oldMap[R - 1][i + 1];
+		//하단 시계회전 - 위쪽으로
+		for(int i = R - 2; i >= row + 2; i--)
+			change[i][0] = oldMap[i + 1][0];
 		return change;
 	}
 }
