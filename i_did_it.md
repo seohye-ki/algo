@@ -70,17 +70,28 @@
 | 66   | PGS    |            | 삼각 달팽이              | 레벨 2     | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/68645)                                       | 구현, 배열      |
 | 67   | PGS    |            | 거리두기 확인하기        | 레벨 2     | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/81302)                                       | 구현, BFS       |
 | 68   | PGS    |            | 행렬의 곱셈              | 레벨 2     | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12949)                                       | 수학, 배열      |
-
-
-### 표 추가 예정 문제
-- swea1208 flatten
-- swea4014 활주로 건설
-- swea4615 오셀로
-- swea6190 정곤이의 단조 증가하는 수
-- swea7102 준홍이의 카드놀이
-- pgs 문자열 압축
-- N과M 1 ~ 12
-- swea5215 햄버거 다이어트
-- swea21885 신입사원 분반교육
-- boj17144 미세먼지 안녕 
-
+| 69   | SWEA   | 1208       | Flatten               | D3           | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV139KOaABgCFAYh)     | 구현            |
+| 70   | SWEA   | 4014       | 활주로 건설            | D4           | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWIeW7FakkUDFAVH)     | 구현, 시뮬레이션 |
+| 71   | SWEA   | 4615       | 오셀로                | D3           | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWRcJ2fa9X0DFAUQ)     | 구현            |
+| 72   | SWEA   | 6190       | 정곤이의 단조 증가하는 수 | D3         | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWcPjEuKAFgDFAU4)     | 구현, 수학      |
+| 73   | SWEA   | 7102       | 준홍이의 카드놀이      | D3           | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWkIlHWqBYcDFAXC)     | 구현, 수학      |
+| 74   | PGS    | -          | 문자열 압축            | 레벨 2       | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/60057)                                          | 구현            |
+| 75   | PGS    | -          | 폰켓몬                 | 레벨 1       | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/1845)                                           | 해시            |
+| 76   | PGS    | -          | 완주하지 못한 선수     | 레벨 1       | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42576)                                          | 해시            |
+| 77   | PGS    | -          | 전화번호 목록          | 레벨 2       | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42577)                                          | 해시            |
+| 78   | PGS    | -          | 의상                   | 레벨 2       | [문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42578)                                          | 해시            |
+| 79   | SWEA   | 5215       | 햄버거 다이어트        | D3           | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWT-lPB6dHUDFAVT)     | 구현, 브루트포스  |
+| 80   | SWEA   | 21885      | 신입사원 분반교육      | D3           | [문제 링크](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWmXZ4DeAqIDFATi)     | 구현            |
+| 81   | BOJ    | 17144      | 미세먼지 안녕          | 골드 4       | [문제 링크](https://www.acmicpc.net/problem/17144)                                                            | 구현, 시뮬레이션 |
+| 82   | BOJ    | 15649      | N과 M (1)             | 실버 3       | [문제 링크](https://www.acmicpc.net/problem/15649)                                                            | 백트래킹        |
+| 83   | BOJ    | 15650      | N과 M (2)             | 실버 3       | [문제 링크](https://www.acmicpc.net/problem/15650)                                                            | 백트래킹        |
+| 84   | BOJ    | 15651      | N과 M (3)             | 실버 3       | [문제 링크](https://www.acmicpc.net/problem/15651)                                                            | 백트래킹        |
+| 85   | BOJ    | 15652      | N과 M (4)             | 실버 3       | [문제 링크](https://www.acmicpc.net/problem/15652)                                                            | 백트래킹        |
+| 86   | BOJ    | 15653      | N과 M (5)             | 실버 2       | [문제 링크](https://www.acmicpc.net/problem/15653)                                                            | 백트래킹        |
+| 87   | BOJ    | 15654      | N과 M (6)             | 실버 3       | [문제 링크](https://www.acmicpc.net/problem/15654)                                                            | 백트래킹        |
+| 88   | BOJ    | 15655      | N과 M (7)             | 실버 3       | [문제 링크](https://www.acmicpc.net/problem/15655)                                                            | 백트래킹        |
+| 89   | BOJ    | 15656      | N과 M (8)             | 실버 3       | [문제 링크](https://www.acmicpc.net/problem/15656)                                                            | 백트래킹        |
+| 90   | BOJ    | 15657      | N과 M (9)             | 실버 2       | [문제 링크](https://www.acmicpc.net/problem/15657)                                                            | 백트래킹        |
+| 91   | BOJ    | 15658      | N과 M (10)            | 실버 2       | [문제 링크](https://www.acmicpc.net/problem/15658)                                                            | 백트래킹        |
+| 92   | BOJ    | 15659      | N과 M (11)            | 실버 2       | [문제 링크](https://www.acmicpc.net/problem/15659)                                                            | 백트래킹        |
+| 93   | BOJ    | 15660      | N과 M (12)            | 실버 2       | [문제 링크](https://www.acmicpc.net/problem/15660)                                                            | 백트래킹        |

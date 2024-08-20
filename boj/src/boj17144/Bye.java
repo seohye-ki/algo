@@ -1,6 +1,5 @@
 package boj17144;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Bye {

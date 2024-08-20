@@ -3,7 +3,7 @@ package matrix_multi;
 class MatrixMulti {
     public int[][] solution(int[][] arr1, int[][] arr2) {
         int arr1Row = arr1.length;
-        int arr1Col = arr1[0].length;
+//        int arr1Col = arr1[0].length;
         int arr2Row = arr2.length;
         int arr2Col = arr2[0].length;
         
