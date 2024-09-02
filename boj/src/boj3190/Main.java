@@ -72,6 +72,7 @@ public class Main {
 			//벽에 부딫히면 끝
 			if(headY < 0 || N <= headY || headX < 0 || N <= headX) {
 				System.out.println(time);
+				sc.close();
 				return ;
 			}
 			//아이템이면 머리 늘리기 꼬리 그대로
@@ -88,6 +89,7 @@ public class Main {
 			//뱀에 부딫히면 끝
 			else {
 				System.out.println(time);
+				sc.close();
 				return ;
 			}
 		}
