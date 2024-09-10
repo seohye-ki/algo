@@ -12,7 +12,7 @@ public class Main {
 		
 		int result = 0;
 		int value = 1;
-		int flag = 1;
+		int flag = 1; //1: 직전이 열린괄호(곱하기) 0: 직전이 닫힌괄호(더하기)
 		for(int i = 0; i < str.length(); i++) {
 			char letter = str.charAt(i);
 			
@@ -28,47 +28,34 @@ public class Main {
 			
 			//닫는 괄호라면 stack에서 하나 꺼내기
 			else {
-				//꺼낼 것이 없다면 invalid
+				//invalid(stack에서 꺼낼 것 없음)
 				if(stack.isEmpty()) {
 					System.out.println(0);
 					return;
 				}
+				
 				//꺼낼 것이 있다면
 				char top = stack.pop();
-				if(letter == ')') {
-					//invalid(괄호짝 안맞음)
-					if(top != '(') {
-						System.out.println(0);
-						return;
-					}
-					else {
-						if(flag == 1) {
-							result += (value / 2); 
-						}
-						else {
-							result *= value;
-						}
+				//invalid(괄호짝 안맞음)
+				if((letter == ')' && top != '(') || (letter == ']' && top != '[')) {	
+					System.out.println(0);		
+					return;
+				}
+				
+				if(flag == 1) {
+					result += value;
+					if(letter == ')')
 						value /= 2;
-						flag = 0;
-					}
-				}
-				else if(letter == ']'){
-					//invalid(괄호짝 안맞음)
-					if(top != '[') {
-						System.out.println(0);
-						return;
-					}
-					else {
-						if(flag == 1) {
-							result += (value / 3); 
-						}
-						else {
-							result *= value;
-						}
+					else
 						value /= 3;
-						flag = 0;
-					}
 				}
+				else {
+					if(letter == ')')
+						value /= 2;
+					else
+						value /= 3;
+				}
+				flag = 0;
 			}
 		}
 		
