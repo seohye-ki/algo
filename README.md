@@ -1,4 +1,4 @@
-### 🐰 2024.07 ~ ing
+## 🐰 2024.07 ~ ing
 
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=seohyeki)](https://solved.ac/seohyeki/)
 
