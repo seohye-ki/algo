@@ -1,7 +1,6 @@
 ## 🐰 2024.07 ~ ing
 
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=seohyeki)](https://solved.ac/seohyeki/)
-<div><img src="http://mazandi.herokuapp.com/api?handle=seohyeki&theme=warm"/></div>
 
 ## 🐰 commit 메세지
 
